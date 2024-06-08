@@ -1,0 +1,13 @@
+n = int(input())
+votes = []
+for i in range(n):
+    vote = input()
+    votes.append(vote)
+count = {}
+for name in votes:
+    count[name] = count.get(name, 0) + 1
+max_vote = max(count.values())
+max_candidates = [name for name, vote in count.items() if vote == max_vote]
+max_candidates.sort()
+print(max_candidates[0])
+
