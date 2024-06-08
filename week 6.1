@@ -1,0 +1,9 @@
+def find_element(locations, element):
+    count = 0
+    found_locations = []
+    for i, item in enumerate(locations, start=1):
+        if item == element:
+            found_locations.append(i)
+            count += 1
+    return found_locations, count
+
